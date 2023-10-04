@@ -36,14 +36,12 @@ class PostList extends Component {
         {posts.map((post) => (
           <div key={post.id}>
             {editingPostId === post.id ? (
-              // Render Edit Form
               <div>
                 <input type="text" value={post.title} />
                 <textarea value={post.body} />
                 <button>Edit</button>
               </div>
             ) : (
-              // Render Post Details
               <div>
                 <h2>{post.title}</h2>
                 <p>{post.body}</p>
