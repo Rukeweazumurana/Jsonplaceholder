@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import "./style.css";
+import DateComponent from "./Date.js";
 
 class PostList extends Component {
   constructor(props) {
@@ -32,6 +34,7 @@ class PostList extends Component {
     const { posts, editingPostId } = this.state;
 
     return (
+      <div id="container">
       <div>
         {posts.map((post) => (
           <div key={post.id}>
@@ -53,6 +56,10 @@ class PostList extends Component {
             )}
           </div>
         ))}
+      </div>
+      <div id='date'>
+        <DateComponent />
+      </div>
       </div>
     );
   }
